@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: midnightblue;
+        }
+        .anz{
+            width:500px;
+            height: 800px;
+            margin: 100px auto;
+            background-color: midnightblue;
+        }
+        .header{
+            width:230px;
+            height:110px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            background-color:white;
+            margin:10px auto;
+            position: relative;
+        }
+        .header::before,
+        .header::after{
+            content: "";
+            position: absolute;
+            width:20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color:black  ;
+            top: 30px;
+        }
+        .header::before{
+            left:70px;
+        }
+        .header::after{
+            right: 70px;
+        }
+        .line{
+            position: relative;
+            width:200px;
+            margin: 0 auto;
+            height: 10px;
+            top:-145px;
+        }
+    .line::before,
+    .line::after{
+        content: "";
+        height: 60px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: white;
+                position: absolute;
+                -webkit-animation-duration:2s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-delay: 0;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-direction: normal;
+                -webkit-animation-name: myfirst;
+                -webkit-animation-play-state: running;
+            }
+        .line::before{
+            left:40px;
+        }
+        .line::after{
+            right:40px;
+        }
+        .content{
+            width: 230px;
+            height: 230px;
+            background-color: white;
+            margin:0 auto;
+            position: relative;
+            border-radius: 0 0 30% 30%;
+        }
+        .content::before,
+        .content::after{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 200px;
+            border-radius: 40%;
+            background-color: white;
+            transform-origin: top;
+
+        }
+        .content::before{
+            left:-60px;
+        }
+        .content::after{
+            right: -60px;
+        }
+        .foot{
+            width: 230px;
+            height: 200px;
+            position: relative;
+            top: -50px;
+            margin: 0 auto;
+        }
+        .foot::before,
+        .foot::after{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 200px;
+            background-color: white;
+            border-radius: 30%;
+        }
+        .foot::before{
+            left:38px;
+        }
+        .foot::after{
+            right: 38px;
+        }
+        *,::before,::after{
+            transition: all 1s;
+        }
+        .anz:hover .header::before{
+            background-color: white;
+        }
+        .anz:hover .header::after{
+            background-color: white;
+        }
+        .anz:hover .header{
+            background-color: black;
+        }
+        .anz:hover .line::before{
+            background-color: black;
+            transform: rotate(-45deg);
+        }
+        .anz:hover .line::after{
+            background-color: black;
+            transform: rotate(45deg);
+        }
+        .anz:hover .content{
+            background-color: black;
+        }
+        .anz:hover .content::before{
+            background-color: black;
+            transform: rotate(2390deg);
+        }
+        .anz:hover .content::after{
+            background-color: black;
+            transform: rotate(-2390deg);
+        }
+
+        .anz:hover .foot::before{
+            background-color: black;
+            transform: rotate(3000deg);
+        }
+        .anz:hover .foot::after{
+            background-color: black;
+            transform: rotate(-3000deg);
+        }
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+            0%   {background:white;
+                top: 0;}
+            100% {background:white;transform: rotate(-3000deg)}
+        }
+    </style>
+</head>
+<body>
+<div class="anz">
+    <div class="header"></div>
+    <div class="line"></div>
+    <div class="content"></div>
+    <div class="foot"></div>
+</div>
+</body>
+</html>
