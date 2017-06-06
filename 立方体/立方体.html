@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div img{
+            width: 100%;
+            height: 100%;
+        }
+        .its{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            transform-style:preserve-3d;
+            transition: all,3s;
+            position: relative;
+        }
+        .its .ok{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 300px;
+            position: absolute;
+            font-size: 50px;
+            font-weight: 900;
+        }
+        .its:hover{
+            transform: rotateX(240deg) rotateY(360deg) rotateZ(180deg);
+        }
+        .ok:nth-child(1){
+            /*background-color: red;*/
+            transform:rotate(0) translateZ(150px);
+            opacity: .5;
+        }
+        .ok:nth-child(2){
+            /*background-color: yellow;*/
+            transform: rotate(0) translateZ(-150px);
+            opacity:.5;
+
+        }
+        .ok:nth-child(3){
+            /*background-color: darkblue;*/
+            transform: rotateY(-90deg) translateZ(150px);
+            opacity: .5;
+
+        }
+        .ok:nth-child(4){
+            /*background-color: deeppink;*/
+            transform: rotateY(90deg) translateZ(150px);
+            opacity: .5;
+
+        }
+        .ok:nth-child(5){
+            /*background-color:lawngreen;*/
+            transform: rotateX(-90deg) translateZ(150px);
+            opacity:.5;
+
+        }
+        .ok:nth-child(6){
+            /*background-color: whitesmoke;*/
+            transform: rotateX(90deg) translateZ(150px);
+            opacity: .5;
+
+        }
+        .clone{
+            width: 150px;
+            height: 150px;
+            transform-style:preserve-3d;
+            transition: all,1s;
+            position: absolute;
+            top:75px ;
+            left : 75px;
+            transform: rotateX(45deg) rotateZ(45deg);
+        }
+        .its .clone .cls{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 150px;
+            position: absolute;
+            font-size: 40px;
+            font-weight: 900;
+        }
+        .cls:nth-child(1){
+            background-color: slategrey;
+            transform:rotate(0) translateZ(75px);
+            opacity: .5;
+        }
+        .cls:nth-child(2){
+            background-color: mediumblue;
+            transform: rotate(0) translateZ(-75px);
+            opacity: .5;
+
+        }
+        .cls:nth-child(3){
+            background-color: #5E740B;
+            transform: rotateY(-90deg) translateZ(75px);
+            opacity: .5;
+
+        }
+        .cls:nth-child(4){
+            background-color: blue;
+            transform: rotateY(90deg) translateZ(75px);
+            opacity: .5;
+
+        }
+        .cls:nth-child(5){
+            background-color:maroon;
+            transform: rotateX(-90deg) translateZ(75px);
+            opacity: .5;
+
+        }
+        .cls:nth-child(6){
+            background-color:hotpink;
+            transform: rotateX(90deg) translateZ(75px);
+            opacity: .5;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="its">
+    <div class="ok"><img src="images/shield/24.gif" alt=""/></div>
+    <div class="ok"><img src="images/shield/24.gif" alt=""/></div>
+    <div class="ok"><img src="images/shield/24.gif" alt=""/></div>
+    <div class="ok"><img src="images/shield/24.gif" alt=""/></div>
+    <div class="ok"><img src="images/shield/24.gif" alt=""/></div>
+    <div class="ok"><img src="images/shield/24.gif" alt=""/></div>
+    <div class="clone">
+        <div class="cls"><img src="images/shield/24.gif" alt=""/></div>
+        <div class="cls"><img src="images/shield/24.gif" alt=""/></div>
+        <div class="cls"><img src="images/shield/24.gif" alt=""/></div>
+        <div class="cls"><img src="images/shield/24.gif" alt=""/></div>
+        <div class="cls"><img src="images/shield/24.gif" alt=""/></div>
+        <div class="cls"><img src="images/shield/24.gif" alt=""/></div>
+    </div>
+</div>
+</body>
+</html>
