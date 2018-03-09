@@ -1,0 +1,40 @@
+<!-- 投诉与建议5 complaints_suggestions  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投诉与建议</title>
+    <link rel="stylesheet" href="../index.css/commom.css">
+</head>
+
+<body>
+    <div class="header_contier">
+        <div class="failure_header">
+            <span>投诉与建议</span>
+            <span>
+                    我们的成长离不开您的建议和监督
+            </span>
+        </div>
+
+        <div class="type_selecter">
+            <label for="name">类型</label>
+            <select name="select_o">
+                <option value="投诉" name="1" >投诉</option>
+                <option value="建议" name="2" selected="selected">建议</option>
+            </select>
+        </div>
+        
+        <div class="type_text">
+            <label for="textarea">内容</label>
+            <textarea rows="20" cols="40" id="textarea"></textarea>
+        </div>
+
+        <input type="submit" value="提交" class="click_sub">
+    </div>
+</body>
+<script src="../commom.js/jquery-2.0.3.js"></script>
+<!-- <script src="./Failure_declare.js"></script> -->
+</html>

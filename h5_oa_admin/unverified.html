@@ -1,0 +1,54 @@
+<!-- 未认证用户 曝露公众号入口 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>蓝泰源</title>
+    <link rel="stylesheet" href="/index.css/commom.css">
+</head>
+
+<body>
+    <div class="header_contier">
+
+        <div class="inlet_top">
+            <div class="inlet_img">
+                <span>待认证</span>
+            </div>
+            <div class="inlet_span">
+                <span class="inlet_span_h3">思考对方</span>
+                <span class="inlet_span_h5">发斯蒂芬是否产生出发</span>
+            </div>
+        </div>
+
+        <div class="phone_postion">星级用户认证咨询电话： 400 800 990 </div>
+
+        <div class="subject">
+            <button id="ratings">受访用户</button>
+            <button type="button">非受访用户</button>
+            <div class="hint">
+                <span class="tips_h4">Tips:</span>
+                <ol>
+                    <li>受访用户可通过电话号码快速认证</li>
+                    <li>非受访用户需通过上传身份证照片、公共交通事业从业证件进行认证。</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script src="./commom.js/jquery-2.0.3.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#ratings").on("click", function () {
+            window.location.href = "./Star_ratings/Star_ratings.html";
+        })
+
+    })
+</script>
+
+</html>
