@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../indexcss/gycome.css">
+    <link rel="stylesheet" href="../indexcss/index.css">
+    <link rel="stylesheet" href="../indexcss/jquery.mobile-1.4.5.min.css">
+    <script src="../indexjs/index.min.js"></script>
+    <script src="../indexjs/jquery.min.js"></script>
+    <script src="../indexjs/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./stastion_list.js"></script>
+    <script src="../indexjs/config.js"></script>
+    <title>目的地站牌</title>
+</head>
+
+<body>
+    <div class="ui-field-contain" id="container">
+        <input type="search" name="search" id="search" maxlength="15" autofocus="autofocus" placeholder="输入目的地公交站">
+        <!-- <input type="search" name="search" maxlength="15" id="search" autofocus="autofocus" placeholder="输入目的地公交站" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\ ]/g,'')"
+            onpaste="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\ ]/g,'')" oncontextmenu="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\ ]/g,'')"> -->
+        <a href="" class="a">取消</a>
+    </div>
+    <span class="span_list">搜索历史</span>
+    <div id="info_yes" class="hide">
+    </div>
+    <!-- 模糊查询 -->
+    <div class="yes_station_list">
+    </div>
+    <div class="bottm">
+        <img src="../images/icon_delete@2x.png" alt="">
+        <span class="both_has">清空所搜历史</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>城市选择</title>
+	<link rel="stylesheet" href="css/lanren.css">
+	<!-- 结合CSS清除JQmobil默认头部底部 -->
+	<!-- <script type="text/javascript">
+	$(document).bind('mobileinit',function(){
+			$.mobile.loadingMessage = false;
+	}) -->
+	</script>
+</head>
+
+<body>
+
+	<!-- 代码部分begin -->
+	<header class="fixed">
+		<img class="back" src="../images/nav_button_return_default@2x.png" alt="">
+		<div class="header">
+			选择地区
+		</div>
+	</header>
+	<div id="letter"></div>
+	<div class="sort_box">
+		<!-- 添加 -->
+		<div class="do">
+			当前城市
+		</div>
+		<div class="do_city">
+			<img src="../images/icon_location_region@2x.png" alt="">
+			<span class="doCity">邯郸</span>
+		</div>
+		<div class="quanbu">全部地区</div>
+		<!-- END -->
+		<div class="info_city">
+			<!-- <div class="sort_list">
+				<div class="num_name">北京市</div>
+			</div> -->
+		</div>
+	</div>
+	<div class="initials">
+		<ul>
+			<li>
+				<img src="images/068.png">
+			</li>
+		</ul>
+	</div>
+	<script src="../indexjs/jquery.min.js"></script>
+	<script src="../indexjs/jquery.mobile-1.4.5.min.js"></script>
+
+	<script src="../indexjs/index.min.js"></script>
+	<script src="js/jquery.charfirst.pinyin.js"></script>
+	<script src="js/sort.js"></script>
+	<script src="../indexjs/config.js"></script>
+	<!-- 代码部分end -->
+	<script>
+		//获取上个页面带过来的值
+		var city = getURLParameter("city");
+		if (city == "undefined") {
+			$(".doCity").text("正在获取定位");
+		} else {
+			$(".doCity").text(city);
+		};
+		// 自定义的js函数，根据参数名取参数值
+		function getURLParameter(name) {
+			return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+		};
+		// 页面加载自动请求
+		$(document).on("pagebeforecreate", function (event) {
+			$.ajax({
+				// url: "http://59.173.242.138:58090/serviceIp/cities",
+				url: URL_all + "/serviceIp/cities",
+				data: {},
+				// params:{"contentType": "application/json;charset=utf-8"},
+				type: 'GET',
+				dataType: 'JSON',
+				async: false,   //处理当前函数在引包之前执行
+				success: function (res) {
+					console.log(res.obj);
+					for (var i = 0; i < res.obj.length; i++) {
+						// citycode.push(res.obj[i].citycode);
+						var cityname = res.obj[i].cityname;
+						var citycode = res.obj[i].citycode;
+						var tag = '<div class="sort_list" cityname=' + cityname + ' citycode=' + citycode + '>';
+						tag += '<div class="num_name">' + cityname + '</div>';
+						tag += '</div>';
+						$(".info_city").append(tag);
+					}
+				},
+				error: function (res) {
+					console.log("异常状态")
+				}
+			})
+			// 点击返回回到上一级
+			$('.back').on('click', function () {
+				window.history.go(-1);
+				// window.history.back();
+			});
+			// 点击城市返回首页
+			$(".sort_box").on('click', '.sort_list', function () {
+				var cityname = $(this).attr('cityname');
+				var citycode = $(this).attr('citycode');
+				location.href = "../webh5.html?cityname=" + cityname + "&citycode=" + citycode;
+			});
+		});
+	</script>
+
+</body>
+
+</html>

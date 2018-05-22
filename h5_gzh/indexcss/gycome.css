@@ -1,0 +1,81 @@
+﻿@charset "UTF-8";
+/*设置默认编码集*/
+
+/*css 初始化 start */
+
+html, body, b, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, span {
+    margin: 0;
+    padding: 0;
+/*盒模型*/
+box-sizing:border-box;
+/*去除移动端特有的点击高亮效果*/
+-webkit-tap-highlight-color:transparent;
+}
+/* 浏览器默认样式去除 */
+h1,h2,h3,h4,h5,h6 {   
+    font-size:100%;   
+    font-weight:normal;   
+    } 
+/*各浏览器显示不同，去掉边框等默认样式*/
+fieldset, img, input, button {
+/*去除边框*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+/*防止拖动 影响布局*/
+/*textarea {
+    resize: none;
+}*/
+
+/*去掉行内替换元素空白缝隙*/
+input,img{
+    border:0;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+        content: "";
+        height: 0;
+        line-height: 0;
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+.clearfix {
+        zoom: 1;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+p{
+    cursor: pointer;
+}
+/* 清除JQmobil默认头部底部东东 */
+.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0} 
+/*  */

@@ -1,0 +1,853 @@
+ /* search */
+body{
+   background-color: #F5F5F5;
+}
+#container{
+   width:100%;
+   height:1.3067rem;
+   background:rgba(255,255,255,1);
+   padding: 0;
+   position: relative;
+}
+#search{
+   display: inline-block;
+   width:7.8667rem;
+   height:0.8533rem;
+   background:rgba(245,245,245,1);
+   border-radius: 0.08rem;
+   margin-left: 0.4rem;
+   margin-bottom: 0.2267rem;
+   margin-top: 0.2267rem;
+   padding-left: 0.8rem;
+   padding-top: 0.24rem;
+   padding-bottom: 0.24rem;
+   font-size:0.3733rem;
+   font-family:HiraginoSansGB-W3;
+   color:rgba(153,153,153,1);
+}
+#container span{
+   float: right;
+   /* margin-right: 0.2667rem; */
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color:rgba(42,182,80,1);
+   line-height:1.3067rem;
+}
+/* 三角 */
+#container img{
+   float: right;
+   width: 0.16rem;
+   height: 0.1067rem;
+   margin-top: 0.6133rem;
+   margin-right: 0.2667rem;
+}
+/* 插件自带 覆盖样式 */
+.ui-input-search:after{
+    width: 0.7733rem !important;
+    height: 0.8rem !important;
+    position: absolute;
+    top:0.2667rem !important;
+    left: 0.48rem !important;
+    margin-top: 0 !important;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: Alpha(Opacity=50);
+    opacity: .5;
+}
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    width: 7.8667rem !important;
+    padding-right: 0 !important;
+    background-color: #fff !important; 
+    border-color:transparent !important;
+    color:transparent !important;
+    text-shadow: 0 0.0267rem 0 #f3f3f3;
+}
+.ui-input-search.ui-input-has-clear .ui-btn.ui-input-clear, .ui-input-text.ui-input-has-clear .ui-btn.ui-input-clear {
+    position: absolute;
+    left:7.3333rem !important;
+    top: 50%;
+    margin: -0.3733rem .3125em 0;
+    border: 0;
+    background-color: transparent;
+}
+.ui-input-text, .ui-input-search{
+    margin: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+.ui-shadow-inset {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/* x 覆盖样式 */
+.ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
+    left: 50% !important;
+    margin-left: -0.2933rem !important;
+    content: "" !important;
+    position: absolute !important;
+    display: block !important;
+    width: 0.5867rem !important;
+    height: 0.5867rem !important;
+    z-index: 1 !important;
+}
+/* 搜索标 */
+/* #container img:nth-child(1){
+   display: block;
+   width: 29px;
+   height: 30px;
+   position: absolute;
+   top:34px;
+   left: 50px;
+} */
+
+/* map位置 */
+.map{
+   width: 100%;
+   height: 1.2rem;
+   line-height: 1.2rem;
+   
+   background-color: #F5F5F5;
+   padding-left: 0.4rem;
+}
+.map img{
+   display: inline-block;
+   width: 0.28rem;
+   height: 0.4rem;
+}
+.map span:nth-child(2){
+   font-size:0.4rem;
+   font-family:HiraginoSansGB-W3;
+   color:rgba(102,102,102,1);
+   margin-left: 0.1333rem;
+}
+.map span:nth-child(3){
+   font-size:0.4rem;
+   font-family:HiraginoSansGB-W3;
+   color:rgba(102,102,102,1);
+   /* margin-left:0.5333rem; */
+}
+/* line线路 */
+.line{
+   width:92%;
+   background:#F5F5F5;
+   padding: 0 0.4rem;
+}
+.title{
+   width: 100%;
+   height: 1.2rem;
+   line-height: 1.2rem;
+   background-color: #fff;
+}
+.title img{
+   width: 0.36rem;
+   height:0.4rem;
+   display: inline-block;
+   margin-left: 0.2667rem;
+}
+.title span:nth-child(2){
+   font-size:0.4267rem;
+   font-family:HiraginoSansGB-W3;
+   color:#2AB650;
+   margin-left: 0.1333rem;
+   vertical-align: middle;
+}
+.title span:nth-child(4){
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color:#333333;
+   margin-right: 0.2667rem;
+   float: right;
+}
+.title span:nth-child(3){
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color:#666666;
+   float: right;    
+   margin-right: 0.2667rem;
+}
+.push_line>ul>li{
+   border-top: 0.0267rem solid #ddd;
+   /* border-bottom: 0.0267rem solid #ddd; */
+   width: 100%;
+   height: 1.76rem;
+   background-color: #fff;
+   padding:0 0.2667rem;
+}
+.up{
+   margin-top: 0.4133rem;
+   width: 100%;
+   height: 0.48rem;
+   line-height: 0.48rem;
+
+}
+.up span:nth-child(1){
+   float: left;
+   font-size:0.4rem;
+   font-family:HiraginoSansGB-W3;
+   color:#333333;
+
+}
+.up span:nth-child(3){
+   float: right;
+   font-size:0.48rem;
+   font-family:HiraginoSansGB-W3;
+   color:#28AC3F;
+   margin-right: 0.1333rem;
+}
+.up span:nth-child(2){
+       font-size:0.32rem;
+       font-family:HiraginoSansGB-W3;
+       color: #535353;
+   float: right;
+}
+.down{
+   margin-top: 0.2133rem;
+   width: 100%;
+   height: 0.32rem;
+   line-height: 0.32rem;
+}
+.down img{
+   display: inline-block;
+   width: 0.32rem;
+   height: 0.32rem;
+}
+.down span:nth-child(2){
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color: #666666;
+   margin-left: 0.1333rem;
+   vertical-align: middle;
+}
+.down span:nth-child(3){
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color: #666666;
+   float: right;
+}
+/* 站台 */
+.station{
+   width: 100%;
+   height: 0.9333rem;
+   font-size:0.4rem;
+   font-family:HiraginoSansGB-W3;
+   color:#999999;
+   line-height:0.9333rem;
+   margin-left: 0.4rem;
+}
+.station_li ul li{
+   border-top: 0.0267rem solid #ddd;
+   width: 92%;
+   height: 1.2rem;
+   line-height: 1.2rem;
+   margin-left: 0.4rem;
+   margin-right: 0.4rem;
+   background: #fff;
+   padding-left: 0.2667rem;
+   padding-right: 0.2667rem;
+   
+}
+.station_li ul li span:nth-child(1){
+   font-size:0.4rem;
+   font-family:HiraginoSansGB-W3;
+   color:#666666;
+   float: left;
+}    
+.station_li ul li span:nth-child(2){
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color:#666666;
+   float: right;    
+}    
+.station_li ul li span:nth-child(3){
+   font-size:0.32rem;
+   font-family:HiraginoSansGB-W3;
+   color:#FB5042;
+   margin-right: 0.1333rem;
+   float: right;
+}    
+
+
+/* 点击搜索show_hide */
+/* 无数据情况 */
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+#hide_show img{
+    display: block;
+    width: 3.84rem;
+    height: 3.5733rem;
+    margin: 4.0667rem auto;
+    margin-bottom:0.4rem;
+}
+#hide_show span{
+    display: block;
+    text-align: center;
+    font-size:0.4rem;
+    font-family:HiraginoSansGB-W3;
+    color: #999999;
+}
+/* 有数据情况 */
+#info_yes>span{
+    display: block;
+    width: 100%;
+    height: 1.2rem;
+    font-size:0.4rem;
+    font-family:HiraginoSansGB-W3;
+    padding-left: 0.4rem;
+    color: #666666;
+    line-height: 1.2rem;
+}
+.yes_line{
+    background-color: #fff;
+}
+.info_yes_his{
+    background-color: #fff;
+}
+.info_yes_his li{
+    width: 100%;
+    height: 50px;
+    line-height: 20px;    
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.yes_line li{
+    width: 100%;
+    height: 1.76rem;
+    padding: 0.4rem 0;
+    /* border-top: 0.0267rem solid #ddd; */
+    border-bottom: 0.0267rem solid #ddd;
+    
+}
+.yes_line div:nth-child(1) img{
+    width: 0.36rem;
+    height: 0.4rem;
+    margin-left: 0.4rem;
+}
+.yes_line div:nth-child(1) span{
+    font-size: 0.4rem;
+    color: #333333;
+    margin-left: 0.16rem;
+   vertical-align: middle;
+}
+.yes_line div:nth-child(2) img{
+    width: 12px;
+    height: 12px;
+    margin-left: 33.4988px;
+}
+.yes_line div:nth-child(2) span{
+    font-size: 0.32rem;
+    color: #999999;
+   vertical-align: middle;
+}
+/* 站点 */
+.yes_station{
+    margin-top: 0.2933rem;
+    background-color: #fff;
+}
+.yes_station li{
+    width: 100%;
+    height: 1.2rem;
+    padding: 0.4rem 0;
+    border-top: 0.0267rem solid #ddd;
+    border-bottom: 0.0267rem solid #ddd;
+    
+}
+.yes_station li img{
+    width: 0.36rem;
+    height: 0.4rem;
+    margin-left: 0.4rem;
+}
+.yes_station li span{
+    font-size: 0.4rem;
+    font-family:HiraginoSansGB-W3;
+    color: #333333; 
+   vertical-align: middle;
+   margin-left: 0.16rem;
+}    
+/* 清除 */
+.bottm{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background-color: #fff;
+    text-align: center;
+}
+.bottm img{
+    width: 0.32rem; 
+    height: 0.32rem;
+}
+.bottm span{
+    font-size: 0.32rem;
+    color: #999999;
+}    
+
+
+/* 线路详情滑动页面的样式 */
+/* 头部 */
+.title_line{
+width: 100%;
+height: 1.1733rem;
+background-color: #fff;
+line-height: 1.1733rem;
+border-bottom: 0.0267rem solid #DDDDDD;
+text-align: center;
+}
+.title_line ._back{
+    width: 0.2667rem;
+    height: 0.48rem;
+    margin-left: 0.4rem;
+    margin-top: 0.32rem;
+    float: left;
+}
+.title_line span{
+    font-size: 0.48rem;
+    color: #333333;
+}
+.title_line .home_back{
+    float: right;
+    width: 0.5333rem;
+    height: 0.5333rem;
+    margin-right: 0.4rem;
+    margin-top: 0.3467rem;
+}
+
+
+
+/* 线路资料 */
+.xinxi{
+    width: 100%;
+    /* height: 0.96rem; */
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 0.4rem 0 0.4rem 0.4rem;
+}
+/* 文字超出省略号 */
+.xinxi .start, 
+.xinxi .end{
+    display: inline-block;
+    height:0.5867rem;
+    line-height: 0.5867rem;
+    width: 3.2667rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.3733rem;
+    color: #333333;
+    text-align: left;
+}
+.xinxi .kaiwang{
+    height:0.5867rem;
+    line-height: 0.5867rem;
+    width: 0.7467rem;
+    display: inline-block;
+    color: #333333;
+    font-size: 0.3733rem;
+    margin-right: 0.1333rem;
+    vertical-align:top;
+}
+.xinxi .bottom span{
+    color: #666666;
+    font-size: 0.32rem;
+}
+.xinxi .bottom span:nth-child(3){
+    margin-left: 0.4rem;
+}
+
+/* 过点车辆信息 */
+.center{
+    margin: 0.2667rem 0.4rem;
+    border: 0.0267rem solid #DDDDDD;
+    width: 92%;
+    height: 2.4rem;
+    background-color: #fff;
+    padding: 0.2667rem 0;
+    text-align: center;
+}
+.center .demo_ele{
+width: 1.6rem;
+height: 1.6rem;
+background-color: #FFFFFF;
+padding: 0.4rem 0.6667rem;
+/* border-right: 0.0267rem solid #ddd; */
+margin: 0 auto;
+display: inline-block;
+vertical-align: top;
+}
+.demo_ele_station{
+    width: 0.9333rem;
+    height: 0.4rem;
+    border: 0.0267rem solid #FAAF19;
+    border-radius:0.08rem;
+    font-size: 0.32rem;
+    color: #666;
+    margin: 0 auto;
+}
+.demo_ele div:nth-child(2),
+.demo_ele div:nth-child(3){
+    margin-top: 0.16rem;
+    width: 1.76rem;
+}
+.demo_ele span{
+    display: inline-block;
+}
+.demo_ele_time{
+font-size: 12PX;
+color: #2AB650;
+}
+.demo_ele_distance,
+.demo_ele_ming{
+font-size: 0.32rem;
+color: #666;
+}
+
+
+/* line---line_page.html 滑动查询图 */
+#wrapper{
+/* height: 8.32rem; */
+/* height: 10.0267rem; */
+width: 100%;
+height: 58.5%;
+background-color: #fff;
+border-top: 0.0267rem solid #DDDDDD;
+/* border-bottom: 0.0267rem solid #DDDDDD; */
+z-index: 1;
+overflow: hidden;
+position: absolute;
+}
+#title_ul{
+    /* position: fixed; */
+    position: absolute;
+    /* height:  10.0267rem; */
+    overflow: visible;
+    white-space: nowrap;   
+ /* 12.10解决行内快默认间距 */
+    word-spacing:-0.0267rem;
+}
+.title_li{
+width: 1.4rem;
+/* height: 8.32rem; */
+/* height: 10.0267rem; */
+text-align: center;
+position: relative;
+padding-top: 0.3333rem;
+/* 12.10解决行内快默认间距 */
+margin-left: -0.1067rem;
+/* wrapper滑动设置 */
+display: inline-block;
+white-space: normal;
+vertical-align: top;
+}
+.title_li .li_o{
+/* font-size: 0.1867rem; */
+transform: scale(.7);
+color: #2AB650;
+visibility: hidden;
+display: inline-block;
+}
+.title_li .li_two{
+    width: 0.6667rem;
+    height: 0.32rem;
+    color: #ccc;
+    /* vertical-align: top; */
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.1827rem;
+    margin-top: -0.1067rem;
+    visibility: hidden;
+}
+.title_li .li_t{
+display:block;
+width: 1.4rem;
+height: 0.16rem;
+background-color: #bb8b8b;
+position: absolute;
+top:1.1467rem;
+left:-0.48rem;
+}
+.title_li .li_f{
+    position: absolute;
+    /* 12.10 */
+    top:1.1827rem;
+    left: 0.6333rem;
+    width: 0.1333rem;
+    height: 0.1333rem;
+    border-radius: 50%;
+    background-color: #fff;
+    
+}
+.title_li .li_five{
+    margin-top: 0.4rem;
+    margin-bottom: 0.1867rem;
+    color: #333333;
+    font-size: 0.3733rem;
+    display: block;
+}
+.title_li .li_six{
+        font-size: 0.3733rem;
+        word-wrap: break-word;
+        /* letter-spacing: 0.32rem;
+        padding-left: 0.32rem; */
+        display: inline-block;
+        width: 1em;
+}
+
+/* 底部换向刷新 */
+.line_bottom{
+    width: 100%;
+    height: 1.3067rem;
+    background-color: #FFFFFF;
+    position: fixed;
+    /* left: 0; */
+    bottom: 0;
+    z-index: 2;
+}
+.line_bottom .line_change,
+.line_bottom .line_ag{
+    width: 1rem;
+    height: 100%;
+}
+.line_bottom .line_change{
+    margin-left: 2.2133rem;
+    float: left;
+}
+.line_bottom .line_ag{
+    margin-right: 2.2133rem;
+    float: right;
+    
+}
+.line_bottom .line_change img,
+.line_bottom .line_ag img{
+    width: 0.5867rem;
+    height: 0.5867rem;
+    display: inline-block;
+    margin-top: 0.1333rem;
+}    
+.line_bottom .line_change span{
+    color: #2AB650;
+}
+.line_bottom .line_ag span{
+color: #666666;
+}
+.line_bottom .line_change span,
+.line_bottom .line_ag span{
+    font-size: 0.32rem;
+    display: inline-block;
+    margin-top: 0.1333rem;
+}
+
+/* webh5+station_list目的地站牌----模糊查询 */
+/* webh5追加站点样式 */
+.dim_sta_li img{
+    display: inline-block;
+    width: 0.36rem;
+    height: 0.4rem;
+    margin-left: 0.4rem;
+    margin-right: 0.1333rem;
+}
+/*  */
+.info_ches{
+    height: 85% !important;
+}
+.info_ches,
+.yes_station_list{
+    position: fixed;
+    top:1.3333rem;
+    left: 0;
+    width: 100%;
+    /* padding-left: 0.4rem; */
+    background-color: #fff;
+    overflow: auto;
+}
+/* 模糊查询-info_ches_station */
+.info_ches_station{
+    position: fixed;
+    top:2.6667rem;
+    left: 0;
+    width: 100%;
+    padding-left: 0.4rem;
+    background-color: rgba(102,102,102,.1);
+}
+
+
+.info_ches_station>ul,
+.yes_station_list>ul{
+    height: 100%;
+    overflow-y: auto;
+}
+.info_ches>ul>li,
+.info_ches_station>ul>li,
+.yes_station_list>ul>li{
+    /* 更改需求模糊查询样式改变，用的历史记录样式，此处样式注释 */
+    /* width: 100%;
+    margin-top: 0.0533rem;
+    height: 1.0667rem;
+    line-height: 1.0667rem; */
+    background-color: rgba(102,102,102,.1);
+
+}
+/* end */
+
+/* stastion电子站牌-title-XXXX公交站 */
+.inp{
+    width: 100%;
+    height: 1.3067rem;
+    background-color: #fff;
+}
+.inp>#search{
+    width: 92%;
+    background-color:#F5F5F5;
+    padding: 0.24rem 0 0.24rem 0.2667rem;
+    color: #999;
+}
+.tation_ul{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 0.28rem;
+}
+.tation_ul ul{
+    border-top: 0.0267rem solid #ddd;
+}
+.tation_ul li{
+    width: 100%;
+    height: 1.7867rem;
+    padding: 0.4rem;    
+    border-bottom: 0.0267rem solid #DDDDDD;
+}
+.U{
+    width: 100%;
+    height: 50%;
+    line-height: 50%;
+}
+.U img{
+    width: 0.36rem;
+    height: 0.4rem;
+}
+.U .life_line{
+    font-size: 0.4rem;
+    color: #333;
+    margin: auto 0.1333rem;
+    vertical-align: middle;
+    
+}
+.U span:nth-child(3),
+.U span:nth-child(5){
+    color: #666666;
+    font-size: 0.32rem;
+    vertical-align: middle;
+}
+.U .on_Station{
+    font-size: 0.32rem;
+    color: #666666;
+    vertical-align: middle;
+}
+.U span:nth-child(5){
+    float: right;
+
+}    
+.U .bigenStation{
+    color: #28AC3F;
+    font-size: 0.48rem;
+    float: right;
+    margin-right: 0.1333rem;
+}
+.D{
+    width: 100%;
+    height: 50%;
+    font-size: 0;
+    margin-top: 0.24rem;
+}
+.D img{
+    display: inline-block;
+    width: 0.32rem;
+    height: 0.32rem;
+    margin-left: 0.36rem;    
+    margin-right: 0.1333rem;
+}
+.D span:nth-child(2),
+.D span:nth-child(3){
+    font-size: 0.32rem;
+color: #999999;
+vertical-align: middle;
+}
+.D .endtime{
+    color: #666666;
+font-size: 0.32rem;
+float: right;
+}
+
+
+/* stastion_list   目的地站牌*/
+#container .a {
+    display: inline-block;
+    color: #2AB650;
+    font-size: 0.4rem;
+    margin-right: 0.4rem;
+    position: absolute;
+    top: 0.4133rem;
+    right: 0.4rem;
+    font-weight: 400;
+}
+
+.span_list {
+    display: inline-block;
+    width: 100%;
+    height: 0.9333rem;
+    line-height: 0.9333rem;
+    font-size: 0.4rem;
+    color: #666;
+    padding-left: 0.4rem;
+    border-bottom: 0.0267rem solid #ddd;
+}
+.add_station{
+    width: 100%;
+    background: #F5F5F5;
+}
+/* .add_station li{
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background-color: #fff;
+    border-bottom: 0.0267rem solid #ddd;
+    list-style: none;
+} */
+.add_station li img{
+    width: 0.36rem;
+    height: 0.4rem;
+    display: inline-block;
+    margin-left: 0.2667rem;
+    margin-right: 0.1333rem;
+}
+
+.add_station li span{
+    font-size: 0.4rem;
+    color: #333333;
+    vertical-align:middle;
+}
+
+
+
+/* .color_green{
+    color:  #2AB650;
+}
+.color_red{
+    color:  #2AB650;
+    transform: scale(2);
+    background: #FA4535;
+}
+.color_red_green{
+    color: #000;
+} */
+
+
+/* line_page等待发车数据样式 */
+.none_num{
+    font-size: 18px;
+    line-height: 1.6rem;
+    color: #2ab650 
+}
