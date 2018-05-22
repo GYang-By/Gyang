@@ -1,0 +1,23 @@
+<!--pages/kabao/kabao.wxml-->
+<view class='container'>
+  <view class='nav'>
+    <image src='../../images/315.png'>
+      <!-- <text>{{add_number}}</text> -->
+    </image>
+  </view>
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}">
+      <view class="weui_cell" bindtap='list_to' data-index="{{index}}">
+        <view class="weui_cell_bd">
+          <view class="weui_cell_bd_p"> {{item.text}} </view>
+          <!-- <view class="weui_cell_bd_q"> {{item.gt}} </view> -->
+          <image src='{{item.gt}}' class='weui_cell_bd_q'></image>
+
+        </view>
+        <!-- <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>  -->
+      </view>
+    </block>
+  </view>
+  <button class='click' bindtap='tosucceed_tab'>刷码乘车</button>
+
+</view>

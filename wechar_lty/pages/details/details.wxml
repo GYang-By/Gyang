@@ -1,0 +1,15 @@
+<view>
+  <view class='top'>详情</view>
+  <view class='v'>
+    <text>有效日期</text>
+    <text>永久有效</text>
+  </view>
+  <view class='v'>
+    <text decode="{{true}}">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</text>
+    <text class='number'>{{number}}</text>
+  </view>
+  <view class='v'>
+    <text>使用须知</text>
+    <text>每人限领1张</text>
+  </view>
+</view>

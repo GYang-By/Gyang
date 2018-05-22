@@ -1,0 +1,58 @@
+// router.beforeEach((to, from , next) => {
+//   /*判断下一个路由是否需要登录，对其进行验证*/
+//   if('auth' in to.meta && to.meta.auth === true ) {
+//       hasAuth.... //判断用户是否登录
+//       if(hasAuth) {
+//           /*如果已经登录，可以进入页面*/
+//           next()
+//       }else {
+//           next({
+//               name: 'AuthHome', //登录注册页
+//               query: {
+//                   redirect_url: to.fullPath
+//               }
+//           })
+//       }
+//   }
+//    next()
+// })
+// 然后判断登录页面的url是否有redirect_url，存在redirect_url则跳转到redirect_url，否则跳转到首页
+
+// if (this.$route.query.redirect_url) {
+//     this.$router.replace({
+//       path: this.$route.query.redirect_url
+//     })
+//   } else {
+//     this.$router.replace({
+//       name: 'homeIndex'
+//     })
+//   }
+
+
+// VUE路由拦截后登录成功，浏览器点击返回按钮还能回到登录页面怎么处理？
+// 1: 需要登录页面的拦截
+
+/*
+* 在beforeEach中拦截
+* https://router.vuejs.org/zh-cn/advanced/navigation-guards.html
+*/
+
+routes.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+
+        if (noLogin) { // 没有登录则跳转/login页，进行登录 
+            next({
+                path: '/login',
+                query: { redirect: to.fullPath }
+            })
+        } else {
+            next()
+        }
+    } else {
+        next()
+    }
+})
+// 2：登录成功后进入到command页面，返回不回到登录页
+
+// 登录成功后的跳转使用router.replace，而不是router.push
+this.$router.replace('/command')

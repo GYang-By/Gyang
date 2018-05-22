@@ -1,0 +1,30 @@
+<!--index.wxml SVN-->
+<view class="container">
+  <!-- 11.16UI -->
+  <view class='image'>
+    <image src='../../images/bg_picture.png'></image>
+  </view>
+  <!--手机号登陆  -->
+  <view class="userphone" id="firstStep_Pad">
+    <input id="input_phoneNum" type="number" maxlength="11" placeholder="请输入您的手机号" bindblur="input_phoneNum" value='{{tele}}'>
+    <image src='../../images/icon_iphone.png'></image>
+    <image class='close' src="../../images/button_set_close.png" catchtap="close"></image>
+    </input>
+  </view>
+  <!--手机验证  -->
+  <view class="yanzhengMa" id="secondStep_Pad">
+    <input type="number" placeholder="验证码" bindinput="input_identifyCode">
+    <image src='../../images/icon_code.png'></image>
+    <button catchtap="reSendPhoneNum" disabled="{{disabled}}">{{msg}}</button>
+    </input>
+  </view>
+  <!--登陆按钮  -->
+  <button catchtap="landing" class='button' disabled="{{click_onload}}">登录</button>
+   <!-- <navigator url='../bind/bind'>..........</navigator> -->
+  <view class='gps_city'>
+    {{currentCity}}
+  </view>
+  <!-- <view class=" usermotto ">
+    <text class="user-motto ">{{motto}}</text>
+  </view> -->
+</view>

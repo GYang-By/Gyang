@@ -1,0 +1,21 @@
+<!--pages/kabao/kabao.wxml-->
+<view class='box'>
+  <text class='nav'>二维码乘车业务已开通</text>
+  <block wx:for="{{list}}">
+    <view class="weui_cell">
+      <view class='aline'>
+        <image src='../../images/icon_query_bus.png'></image>
+        <view class="ul_t"> {{item.line}} </view>
+      </view>
+      <view class="ul_b"> {{item.text}} </view>
+    </view>
+  </block>
+  <text class='text'>其它线路正在开通中...</text>
+
+
+
+  <!-- 背景图  
+  <view class='img'>
+  <image src="../../images/u423.png"></image>
+  </view> -->
+</view>

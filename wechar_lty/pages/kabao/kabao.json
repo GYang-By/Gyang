@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "公交卡",
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": "100"
+}

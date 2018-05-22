@@ -1,0 +1,150 @@
+/*设置页面背景色  */
+
+page {
+  display: block;
+  background-color: #f5f5f5;
+}
+
+.box {
+  width: 340rpx;
+  height: 320rpx;
+  /* margin-top: 180rpx;
+  margin-left: 200rpx; */
+  margin: 180rpx auto;
+  margin-bottom: 0;
+}
+
+.box image {
+  width: 100%;
+  height: 100%;
+}
+
+.text_one {
+  font-family: 'Arial Normal', 'Arial';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30rpx;
+  color: #333;
+  display: block;
+  text-align: center;
+  margin-top: 28rpx;
+}
+
+.text_two {
+  color: #999;
+  text-align: center;
+  font-size: 28rpx;
+  display: block;
+  margin-top: 20rpx;
+}
+
+/*or  */
+
+.bind {
+  color: #fff;
+  width: 88%;
+  height: 80rpx;
+  background-color: #cacaca;
+  font-size: 34rpx;
+  line-height: 80rpx;
+  margin-top: 88rpx;
+  border-radius: 20rpx;
+}
+
+/*or  */
+
+.check_button {
+  color: #fff;
+  width: 88%;
+  height: 80rpx;
+  background-color: #2ab350;
+  font-size: 34rpx;
+  line-height: 80rpx;
+  margin-top: 88rpx;
+  border-radius: 20rpx;
+}
+
+.checkbox {
+  display: block;
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+checkbox {
+  transform: scale(0.8);
+}
+
+checkbox-group {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.to_clause {
+  display: inline-block;
+  color: #5298ff;
+}
+
+/*底部TAB定位  */
+
+.bot {
+  width: 100%;
+  height: 95rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1rpx solid #ddd;
+}
+
+.che_left {
+  text-align: center;
+  width: 72rpx;
+  height: 95rpx;
+  position: absolute;
+  left: 140rpx;
+  bottom: -14rpx;
+}
+
+.che_left image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.che_left text {
+  width: 72rpx;
+  height: 22rpx;
+  display: block;
+  font-size: 22rpx;
+  margin-bottom: 10rpx;
+}
+
+.che_right {
+  right: 140rpx;
+  text-align: center;
+  width: 72rpx;
+  height: 95rpx;
+  position: absolute;
+  bottom: -14rpx;
+}
+
+.che_right image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.che_right text {
+  width: 72rpx;
+  height: 22rpx;
+  display: block;
+  font-size: 22rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 重复点击flag样式自定义，覆盖默认 */
+
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2ab650;
+}

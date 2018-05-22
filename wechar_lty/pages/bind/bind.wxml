@@ -1,0 +1,35 @@
+<!--绑定one  -->
+<view>
+  <view class='box'>
+    <image src='../../images/icon_wechat.png'></image>
+  </view>
+  <text class='text_one'>未绑定微信支付!</text>
+  <text class='text_two'>开通二维码业务需要绑定微信免密支付</text>
+  <button class="{{isChecked?'check_button':'bind'}}" bindtap="gotoAuto_one"> 进入小程序 </button>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox">
+      <checkbox></checkbox>
+      我已阅读并同意
+      <!--to跳转到协议页面  -->
+      <navigator class='to_clause' url='../clause/clause' catchtap='prevent_vent'>《坐公交服务条款》</navigator>
+    </label>
+  </checkbox-group>
+</view>
+<!--底部添加TAB  -->
+<view class='bot'>
+  <view class='che_left' bindtap='hide'>
+    <image src='{{che_left}}'></image>
+    <text style='color:{{er_o}}'>二维码</text>
+  </view>
+  <!--右下角点击事件 未绑定不触发跳转，弹出提醒  -->
+  <view class='che_right' bindtap='show'>
+    <toast hidden="{{hidden}}" duration="1500" bindchange="open">
+      <icon size='40'></icon>
+      请绑定自动缴费乘车
+    </toast>
+    <image src='{{che_right}}'></image>
+    <text style='color:{{er_t}}'>我的</text>
+  </view>
+</view>
+<!--蒙层防止点击多次调转  14L-->
+<view class="prevent-screen" hidden="{{!prevent}}"></view>

@@ -1,0 +1,73 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.xiaofei {
+  width: 100%;
+  /* height: 127rpx; */
+  border-bottom: 1px solid #dedede;
+  position: relative;
+}
+
+.left {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+}
+
+/*补扣  */
+
+.bukou {
+  width: 70rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+  border: 1rpx solid #2ab650;
+  position: absolute;
+  text-align: center;
+  color: #2ab650;
+  top: 10px;
+  left: 58px;
+}
+
+.right {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  position: absolute;
+  top: 15px;
+  right: 30rpx;
+}
+
+.time {
+  color: #666;
+  font-size: 24rpx;
+  font-weight: 400;
+  position: absolute;
+  top: 35px;
+  left: 18px;
+}
+
+/*无数据的提示文字  */
+
+.hide_show {
+  text-align: center;
+  font-size: 36rpx;
+  color: rgba(42, 182, 80, 0.6);
+  margin-top: 300rpx;
+}
+/*到底提示  */
+.down_pages{
+  font-size: 28rpx;
+  color: rgba(204,204,204, 0.7);
+  margin: 20rpx 0;
+}

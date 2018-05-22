@@ -1,0 +1,130 @@
+page {
+  display: block;
+  max-height: 100%;
+  background-color: #2ab650;
+}
+
+.container {
+  padding: 0;
+  width: 100%;
+}
+
+/* qcode*/
+
+/* style="background:#fff; margin: 0 auto;"  */
+
+.img_box {
+  margin: 40rpx auto;
+  width: 88%;
+  background-color: #fff;
+  border-bottom: 1rpx dashed #ccc;
+  position: relative;
+  padding-top: 76rpx;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 600rpx;
+  margin-top: -76rpx;
+}
+
+/*当超过5次背景处理  */
+
+/* .five_surpass {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 640rpx;
+  position: absolute;
+  top: 80rpx;
+} */
+
+/*  */
+
+.text {
+  font-size: 32rpx;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 38rpx;
+}
+
+.cent {
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.cent image {
+  display: inline-block;
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: -4rpx;
+}
+
+.cent_bot {
+  margin-left: 12rpx;
+  font-size: 30rpx;
+  color: #2ab650;
+  display: inline-block;
+}
+
+.cent_text {
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 30rpx;
+  padding-bottom: 76rpx;
+}
+
+.into_kb {
+  display: none;
+  width: 88%;
+  height: 124rpx;
+  line-height: 124rpx;
+  background-color: #ccc;
+  font-size: 32rpx;
+  color: #5298ff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  position: relative;
+}
+
+.into_kb::after, .into_kb::before {
+  content: "";
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #2ab650;
+}
+
+.into_kb::after {
+  top: -14rpx;
+  left: -13rpx;
+}
+
+.into_kb::before {
+  top: -14rpx;
+  right: -13rpx;
+}
+
+/*暂时替代卡包功能样式  */
+
+.into_kb_show {
+  width: 88%;
+  height: 124rpx;
+  line-height: 124rpx;
+  background-color: #ccc;
+  font-size: 32rpx;
+  color: #5298ff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  position: relative;
+}
+
+/*  */

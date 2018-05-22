@@ -1,0 +1,28 @@
+<!--交易记录  -->
+<view class="container">
+  <!-- bindscrolltoupper="refresh" 滚动到顶部/左边出发的函数scrolltoupper 未取  -->
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" wx:if="{{none_scroll}}">
+
+    <block wx:for="{{userListInfo}}">
+      <view class="xiaofei" data-index="{{index}}" catchtap="onclick" style="height:{{scrollHeight/10}}px;">
+        <text class='left'>{{text}}</text>
+        <text wx:if="{{item.type_a>0}}" class="bukou">补扣</text>
+        <text class='right'>-{{item.texto}}元</text>
+        <text class='time'>{{item.time}}</text>
+      </view>
+    </block>
+
+  </scroll-view>
+  <!--loding  -->
+  <!-- <view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+  </view>  -->
+  <text wx:if="{{none_down}}" class='down_pages'>··········· 没有更多了···········</text>
+
+  <text wx:if="{{none_doc}}" class='hide_show'>暂无消费记录</text>
+</view>
+
+<!-- 一定要将scroll-view容器设置宽度,并设置white-space: nowrap;
+一定要将scroll-view容器的每一项都设置宽度和display:inline-block -->

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="userinfo">
+    <image src='../../images/bg.png' class='img2'></image>
+    <image bindtap="bindViewTap" class="userinfo-avatar2" src="../../images/icon_head.png"></image>
+    <image bindtap="bindViewTap" class="userinfo-avatar2" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class='name2'>{{userInfo.nickName}}</text>
+  </view>
+  <!--bot  -->
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}">
+      <view class="weui_cell" bindtouchstart="mytouchstart" data-index="{{index}}" bindtouchend="my_to">
+        <view class="weui_cell_hd">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="weui_cell_bd">
+          <view class="weui_cell_bd_p"> {{item.text}} </view>
+        </view>
+        <view class="weui_cell_td">
+          <image src='{{item.gt}}' class='gt'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!--蒙层防止点击多次调转  -->
+<view class="prevent-screen" hidden="{{!prevent}}"></view>

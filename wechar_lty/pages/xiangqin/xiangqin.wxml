@@ -1,0 +1,39 @@
+<!--消费详情  -->
+<view class='container'>
+  <view class="bgBox">
+    <image class='img' src='../../images/icon_bus.png'>
+      <image class='icon' src='../../images/icon_fill_buckle.png' wx:if="{{bu}}"></image>
+    </image>
+    <text class='one' decode="{{true}}">{{line}}&nbsp;&nbsp;开往—{{lineend}}</text>
+    <text class='two'>{{busCode}}</text>
+    <text class='three'>{{leixin}}</text>
+    <text class='four'>{{rmb}}元</text>
+    <view class='leftName'>
+      <text decode="{{true}}">上&nbsp;&nbsp;车&nbsp;&nbsp;站&nbsp;&nbsp;点</text>
+      <text>上车刷卡时间</text>
+      <!--补扣情况  -->
+      <!-- <text wx:if="{{condition}}" decode="{{true}}">下&nbsp;&nbsp;车&nbsp;&nbsp;站&nbsp;&nbsp;点</text> -->
+      <!-- <text wx:if="{{condition}}">下车刷卡时间</text> -->
+      <text>扣费结算时间</text>
+      <!--  -->
+      <!-- <text>虚拟公交卡号</text> -->
+      <text>交易流水单号</text>
+    </view>
+    <view class='rightName'>
+      <text>{{upLine}}</text>
+      <text>{{upTime}}</text>
+      <!--补卡情况  -->
+      <!-- <text wx:if="{{condition}}">{{downCode}}</text> -->
+      <!-- <text wx:if="{{condition}}">{{downTime}}</text> -->
+      <text>{{closeTime}}</text>
+      <!--  -->
+      <!-- <text>{{kahao}}</text> -->
+      <text>{{daohao}}</text>
+    </view>
+  </view>
+  <!--遮罩层--数据异常时  -->
+  <modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="modalOk" confirmText="我知道了">
+    <view class="vedw">{{vedw_text}}</view>
+  </modal>
+  <!--  -->
+</view>
